@@ -1,0 +1,28 @@
+-<h1> WELCOME AT THE GOSSIP PROJECT.Lets Gossip!</h1>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date_created</th>
+      <th scope="col">Profil</th>
+    </tr>
+  </thead>
+  	<tbody>
+    <% @potin.each do |t|%>
+   <tr class="table-primary">
+      <th scope="row"><%= t.user.id %></th>
+      <td><%= t.user.first_name %></td>
+      <td><%= t.title %></td>
+      <td><%= t.user.created_at %></td>
+      <td> <a href="profil/<%=t.user.id%>"><button type="button" class="btn btn-outline-primary">A propos</button></a></td>
+    </tr>
+    <% end %>
+</tbody>
+
+
+
+
